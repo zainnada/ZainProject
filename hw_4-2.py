@@ -1,4 +1,5 @@
 # Homework4 Q2
+
 import math
 
 my_id = 0
