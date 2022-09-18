@@ -2,14 +2,14 @@
 import math
 
 my_id = 0
-my_premesion = False
+my_permission = False
 num1 = input("Enter the first number: ")
 condition1 = num1.isdigit() or num1.__contains__(".")
 
 if condition1:
     num1 = float(num1)
     op = input("Choose The Operator\n1_+\n2_-\n3_*\n4_/\n5_^\n6_%\n")
-    my_premesion = True
+    my_permission = True
     if op == "1" or op == "+":
         my_id = 1
     elif op == "2" or op == "-":
@@ -23,12 +23,13 @@ if condition1:
     elif op == "6" or op == "%":
         my_id = 6
     else:
-        my_premesion = False
+        my_permission = False
         print("Error..")
 
 else:
     print("Error")
-if my_premesion:
+
+if my_permission:
     num2 = input("Enter the second number: ")
     condition2 = num2.isdigit() or num2.__contains__(".")
     if condition2:
