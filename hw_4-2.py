@@ -7,6 +7,7 @@ num1 = input("Enter the first number: ")
 condition1 = num1.isdigit() or num1.__contains__(".")
 
 if condition1:
+    num1 = float(num1)
     op = input("Choose The Operator\n1_+\n2_-\n3_*\n4_/\n5_^\n6_%\n")
     my_premesion = True
     if op == "1" or op == "+":
@@ -31,28 +32,29 @@ if my_premesion:
     num2 = input("Enter the second number: ")
     condition2 = num2.isdigit() or num2.__contains__(".")
     if condition2:
+        num2 = float(num2)
         if my_id == 1:
-            result = float(num1) + float(num2)
+            result = num1 + num2
         elif my_id == 2:
-            result = float(num1) - float(num2)
+            result = num1 - num2
         elif my_id == 3:
-            result = float(num1) * float(num2)
+            result = num1 * num2
         elif my_id == 4:
-            result = float(num1) / float(num2)
+            result = num1 / num2
         elif my_id == 5:
-            result = float(num1) ** float(num2)
+            result = num1 ** num2
         elif my_id == 6:
-            result = float(num1) % float(num2)
-        print(result)
-        ex_op = input("Extra choices:\n1_Print a rounded of the number\n2_print without a decimal point\n3_Exit\n")
+            result = num1 % num2
+        print(f"Result = {result}")
+        ex_op = input("Extra choices:\n1_Print a rounded of the number\n2_Print without a decimal point\n3_Exit\n")
         if ex_op == "1":
             result = round(result)
-            print(result)
+            print(f"The rounded number = {result}")
         elif ex_op == "2":
             result = math.floor(result)
-            print(result)
+            print(f"The floor of number = {result}")
         elif ex_op == "3":
-            print("Exit")
+            print("Good bye :)")
         else:
             print("Error")
     else:
