@@ -1,5 +1,5 @@
 
 print("Hello, world!")
-print("Zain Al-Abidin H. Abu nada")
+print("Zain Al-Abidine H. Abu nada")
 
 print("welcome!")
